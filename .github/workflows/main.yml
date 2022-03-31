@@ -20,6 +20,6 @@ jobs:
           script: |
             cd test
             cd ${{secrets.SERVICE_NAME}}
-            kill -9 $(lsof -ti:${{secrets.SERVICE_PORT}})
+            pm2 start "npm run start" --name "app"
             git pull
             echo 'Deloyment successful'
