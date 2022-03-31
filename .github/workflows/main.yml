@@ -21,6 +21,6 @@ jobs:
             cd test
             cd ${{secrets.SERVICE_NAME}}
             pm2 stop app
-            pm2 start "npm run start" --name "app"
             git pull
+            pm2 start "npm run start" --name "app"
             echo 'Deloyment successful'
