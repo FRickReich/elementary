@@ -22,5 +22,4 @@ jobs:
             cd ${{secrets.SERVICE_NAME}}
             kill -9 $(lsof -ti:${{secrets.SERVICE_PORT}})
             git pull
-            npm run start
             echo 'Deloyment successful'
